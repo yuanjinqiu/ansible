@@ -1,0 +1,13 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: lineinfile file
+    lineinfile:
+      path: /root/ansible/ip
+      line: " test "
+      regexp: "^ansible"
+      #state: absent
+      backrefs: yes
+     
+   

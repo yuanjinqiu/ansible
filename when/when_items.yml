@@ -1,0 +1,12 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "{{item}}"
+    with_items: [1,2,3]
+    #  - 1
+    #  - 2
+    

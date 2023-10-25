@@ -1,0 +1,13 @@
+---
+- hosts: test
+  remote_user: root
+  vars:
+    user:
+      name: jinqiu
+      age: 30
+      
+  tasks:
+  - name: debug
+    debug: 
+      msg: "{{item.key}} {{item.value}}"
+    with_dict: "{{user}}"    

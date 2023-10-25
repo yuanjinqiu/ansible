@@ -1,0 +1,9 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "{{item}}"
+    with_random_choice: [1,2,3]

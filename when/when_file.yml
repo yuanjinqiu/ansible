@@ -1,0 +1,11 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "{{item}}"
+    with_file:
+        - /Users/v_yuanjinqiu/ansible/a
+        - /Users/v_yuanjinqiu/ansible/b

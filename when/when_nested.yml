@@ -1,0 +1,12 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "{{item}}"
+    with_nested:
+      - [a,b,c]
+      - [1,2,3]
+    

@@ -1,0 +1,14 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: replace file
+    replace:
+      path: /root/ansible/ip
+      regexp: "ansible"
+      replace: "test"
+      backup: yes
+      
+
+     
+   

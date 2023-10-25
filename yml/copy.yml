@@ -1,0 +1,11 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: copy file
+    copy:
+      dest: /root/ansible/
+      src: a.txt
+
+     
+   

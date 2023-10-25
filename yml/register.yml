@@ -1,0 +1,14 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: register
+    shell:  who am i
+    register: user
+  
+  - name: debug
+    debug:
+      msg: "{{user}}"
+  - name: debug
+    debug:
+      msg: "{{user.stdout}}"   

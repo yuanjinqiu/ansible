@@ -1,0 +1,12 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "index:{{item[0]}},value:{{item[1]}}}"
+    with_indexed_items:
+      - [a,b,c]
+      - [1,2,3]
+    

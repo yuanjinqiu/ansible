@@ -1,0 +1,14 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: set_fact
+    set_fact:
+      test_var: "jin"
+
+  - name: debug
+    debug:
+      msg: "{{test_var}}" 
+
+     
+   

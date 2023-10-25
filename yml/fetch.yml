@@ -1,0 +1,11 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: pull file
+    fetch:
+      src: /root/ip
+      dest: /Users/v_yuanjinqiu/shell/
+      flat: yes
+     
+   

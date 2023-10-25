@@ -1,0 +1,11 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: blockinfile file
+    blockinfile:
+      path: /root/ansible/ip
+      block: "123"
+
+     
+   

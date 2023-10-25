@@ -1,0 +1,10 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: cat file
+    debug:
+      msg: "{{ lookup('file','/Users/v_yuanjinqiu/ansible/hosts') }}"
+
+     
+   

@@ -1,0 +1,19 @@
+--- 
+- hosts: test
+  remote_user: root
+  vars_prompt:
+     - name: "your_name"
+       prompt: "what's your name"
+       private: no #输入信息是否显示
+     - name: your_passwd
+       prompt: "your passwd"
+       private: yes
+  tasks:
+  - name: debug
+    debug:
+      msg: "{{your_name}}"
+     
+  - name: debug
+    debug:
+      msg: "{{your_passwd}}"
+   

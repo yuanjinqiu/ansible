@@ -1,0 +1,13 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - name: debug
+    debug:
+      msg: "Remote host memory information : {{ansible_memory_mb['real']}}"
+  
+  - name: debug
+    debug:
+      msg: "{{ansible_all_ipv4_addresses[0]}}"
+     
+   

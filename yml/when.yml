@@ -1,0 +1,22 @@
+--- 
+- hosts: test
+  remote_user: root
+  tasks:
+  - debug:
+      msg: "{{item}}"
+    with_items:
+      - 1 
+      - 2
+      - 3
+    when: item >1
+
+  - debug: 
+      msg: "{{ansible_distribution}}"     
+   
+  - debug: 
+      msg: "{{ansible_distribution_major_version}}"     
+  
+  
+  - debug: 
+      msg: "this is centos8"
+    when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"   

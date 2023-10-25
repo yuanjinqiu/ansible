@@ -1,0 +1,14 @@
+---
+- hosts: test
+  remote_user: root
+  tasks:
+  
+  - name: debug
+    debug: 
+      msg: "{{item}}"
+    with_sequence: 
+        start=1 
+        end=10
+        stride=2
+        format="number is %s" 
+    
